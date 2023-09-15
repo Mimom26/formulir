@@ -1,0 +1,92 @@
+<?php
+
+
+
+?>
+<DOCTYPE html>
+    <head>
+        <title>Pendaftaran Bola Volley</title>
+        <link real="stylesheet" href="csss.css">
+    </head>
+    <body>
+
+    <div class="container">
+        <style>
+        .container {
+        background-color: lightblue;
+        padding: 30px;
+        border: 1px solid gray;
+        width: 600px;
+        margin: 0 auto;
+    }
+        </style>
+        <div class="border" align="center">
+            <form action="pendaftaran2.php" method="POST">
+                <div align="center">
+                    <div class="border" align = "center">
+                        <center>
+                        <table>
+                            <h2> Formulir Pendaftaran Bola volley </h2>
+                            <h3> Antar Rt Dan Rw  </h3>
+                            <tr>
+                            <td>Nama team </td>
+                            <td>:</td>
+                            <td><input type="text" name="nama" placeholder="masukkan nama tim mu" pattern="[A-Za-z\s]+" title="nama tim hanya boleh berisi huruf dan spasi" required></td>
+                            </tr>
+                            <tr>
+                            <td>Jumlah anggota</td>
+                            <td>:</td>
+                            <td><input type="number" name="jumlah" placeholder="jumlah" id="jumlah" min="0" max="15" required></td>
+                            </tr>
+                            <tr>
+                            <td>asal</td>
+                            <td>:</td>
+                            <td>rt<input type="number" name="rt" required>rw<input type="number" name="rw" required></td>
+                            </tr>
+                            <tr>
+                            <td>Nama ketua team</td>
+                            <td>:</td>
+                            <td><input type="text" name="ketua" placeholder="massukkan nama ketua" pattern="[A-Za-z\s]+" title="nama Ketua hanya boleh berisi huruf dan spasi" required></td>
+                            </tr> 
+                            <tr>
+                            <td>nomor hp ketua tim</td>
+                            <td>:</td>
+                            <td><input type="number" name="nomerHp" placeholder="masukkan nomor"pattern="[0-9]+" maxlength="11" title="hanya boleh mengandung angka" required></td>
+                            </tr>
+                            <tr>
+                            <td>Upload foto ktp</td>
+                            <td>:</td>
+                            <td><input type="file" name="poto" onchange="checkFilesize(this)" required></td>
+                            </tr>
+                            <tr>
+                            <td>tanggal pendaftaran</td>
+                            <td>:</td>
+                            <td><input type="date" name="tanggal" required></td>
+                            </tr>
+                            <tr>
+                            <td>Jenis Tim</td>
+                            <td>:</td>
+                            <td><input type="radio" name="jenis" values="putra" id="jenis" >putra
+                            <input type="radio" name="jenis" values="putri" id="jenis" >putri</td>
+                            </tr>
+                            <tr>
+                                <td><input type="submit" name="submit" value="kirim"></td>
+                            </tr>
+                            <script>
+                            function checkFilesize(input){
+                                var maxSize = 2 * 1024 * 1024;
+                                if (input.fles[0].size > maxSize) {
+                                    alert("ukuran file terlalu besar. Maksimum 2 mb.");
+                                    input.value = "";
+                                }
+                            }
+                            </script>
+                        </table>
+                        </center>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    </body>
+</DOCTYPE>
